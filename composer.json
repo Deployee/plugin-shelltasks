@@ -8,9 +8,13 @@
             "email": "the@phizzl.de"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
-        "php": ">=7.0"
+        "php": ">=7.0",
+        "deployee/container": "^1.0",
+        "deployee/dependency": "^1.0",
+        "deployee/plugins": "^1.0",
+        "deployee/plugin-deploy": "^1.0",
+        "phizzl/php-shell-command": "^1.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
