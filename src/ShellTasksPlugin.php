@@ -4,6 +4,7 @@
 namespace Deployee\Plugins\ShellTasks;
 
 
+use Deployee\Components\Config\ConfigInterface;
 use Deployee\Components\Container\ContainerInterface;
 use Deployee\Components\Dependency\ContainerResolver;
 use Deployee\Components\Plugins\PluginInterface;
@@ -20,8 +21,11 @@ class ShellTasksPlugin implements PluginInterface
      */
     public function boot(ContainerInterface $container)
     {
-        $container->set(ExecutableFinder::class, function(){
-            return new ExecutableFinder();
+        $container->set(ExecutableFinder::class, function(ContainerInterface $container){
+            /* @var ConfigInterface $config */
+            $config = $container->get(ConfigInterface::class);
+
+            return new ExecutableFinder($config->get('shell.aliases', []));
         });
     }
 
