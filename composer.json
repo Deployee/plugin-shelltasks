@@ -9,11 +9,11 @@
         }
     ],
     "require": {
-        "php": ">=7.3",
-        "deployee/container": "^2.0",
-        "deployee/dependency": "^2.0",
-        "deployee/plugins": "^2.0",
-        "deployee/plugin-deploy": "^2.0",
+        "php": ">=8.0",
+        "deployee/container": "3.0.0",
+        "deployee/dependency": "3.0.0",
+        "deployee/plugins": "3.0.0",
+        "deployee/plugin-deploy": "3.0.0",
         "phizzl/php-shell-command": "^1.0"
     },
     "require-dev": {
